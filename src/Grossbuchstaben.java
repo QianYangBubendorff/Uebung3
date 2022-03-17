@@ -1,18 +1,17 @@
 public class Grossbuchstaben {
     public static void main(String[] args) {
-        System.out.println(grossBuchStaben("I am one cat"));
+        System.out.println(grossBuchStaben("i am one cat"));
 
 
     }
     public static String grossBuchStaben(String original){
         String newStr= new String();
         char c =' ';
-        newStr = newStr + original.charAt(0);
 
-        for(int i=1; i<original.length(); i++){
+
+        for(int i=0; i<original.length(); i++){
             c = original.charAt(i);
-
-            if (original.charAt(i - 1) == ' ') {
+            if(i==0 ||(i>0 && original.charAt(i - 1) == ' ')) {
                 c = Character.toUpperCase(original.charAt(i));
             }
 
