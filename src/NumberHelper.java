@@ -53,47 +53,41 @@ public class NumberHelper {
         }
         // Creating new array which combine the number of the 2D array with the length l.
         int[] arr3 = new int[arr2.length];
-        boolean found=false;
-
+//        boolean found=false;
+// initialize all arr3 elements with value -1.
         int n = 0;
         for (int i = 0; i < arr3.length; i++) {
             arr3[i] = -1;
         }
 
         for (int i = 0; i < arr2.length; i++) {
+            for(int j = 0; j<arr3.length;j++) {
 
-            for(int j = 0; j<arr2.length;j++) {
-                if(arr2[i] == arr3[j]) {
-                    found = true;
+                if(arr2[i]==arr3[j]){
+                    arr2=Arrays.copyOfRange(arr2,i, arr2.length);
                 }
-            }
-
-            if(!found){
-                arr3[n] = arr2[i];
+                }
+                arr3[n]=arr2[i];
                 n++;
-            } else {
-                found = false;
+
+
             }
+//                if(arr2[i] == arr3[j]) {
+//                    found = true;
+//                }
+//            }
+//
+//            if(!found){
+//                arr3[n] = arr2[i];
+//                n++;
+//            } else {
+//                found = false;
+//            }
 
-
+        return arr3;
         }
 
-    /*    for (int i = 0; i < arr2.length; i++) {
-            for (int j = i + 1; j < arr2.length; j++) {
-                if (arr2[i] == arr2[j]) {
-                    found = true;
 
-                }
-
-                }
-            if(!found) {
-
-                arr3[i] = arr2[i];
-            }else found = false;
-
-
-        }*/
-        return arr3;
     }
-}
+
 
