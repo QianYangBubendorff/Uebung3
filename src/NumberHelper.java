@@ -42,7 +42,6 @@ public class NumberHelper {
                 l++;
             }
         }
-
         int[] arr2 = new int[l];
         int k = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -59,7 +58,6 @@ public class NumberHelper {
         for (int i = 0; i < arr3.length; i++) {
             arr3[i] = -1;
         }
-
         for (int i = 0; i < arr2.length; i++) {
             for (int j = 0; j < arr3.length && !found; j++) {
 
@@ -73,11 +71,8 @@ public class NumberHelper {
             }
             found=false;
         }
-
             return arr3;
         }
-
-
     }
 
 
